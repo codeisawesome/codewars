@@ -61,3 +61,10 @@ def vowel_shift(text,n)
   return string
 
 end
+
+def vowel_shift(text, n)
+  return if text.nil?
+
+  replacements = text.scan(VOWELS).rotate(-n)
+  text.gsub(VOWELS) { replacements.shift }
+end
