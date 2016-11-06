@@ -24,3 +24,20 @@
 # Your task is to complete the method provided and return the number of years 'Y' as a whole in order for Mr. Scrooge to get the desired sum.
 #
 # Assumptions : Assume that Desired Principal 'D' is always greater than the initial principal, however it is best to take into consideration that if the Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
+
+def calculate_years(principal, interest, tax, desired)
+	#converting variables into floats
+	principal = principal.to_f
+	desired = desired.to_f
+	interest = interest.to_f
+	tax = tax.to_f
+	year = 0
+	year.to_f
+
+	#awesome one line math formula baby!
+	year = Math::log(desired/principal)/Math::log(1+interest*(1-tax))
+
+	#.ceil return the ceiling of the float number
+
+	return year.ceil
+end
