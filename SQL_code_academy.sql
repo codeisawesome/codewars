@@ -19,3 +19,11 @@ SELECT a.dep_month,
        ) a
  GROUP BY 1,2
  ORDER BY 1,2;
+
+-- Find the id of the flights whose distance is below average for their carrier.
+SELECT id
+FROM flights AS f
+WHERE distance < (
+	SELECT AVG(distance)
+	FROM flights
+	WHERE carrier = f.carrier);
