@@ -33,7 +33,7 @@ def vowel_shift(text,n)
 
   # letrs_arr = ["t", "h", "i", "s" ...]
   letrs_arr = text.split("")
-  letrs_arr_len = letrs_arr.length
+  # letrs_arr_len = letrs_arr.length
   letr_arr_ind = 0
   # big_array [["i", 2, var], ["i", 5, var], ["a", 8, var], ["e", 11, var]]
   # var will depend on the given n
